@@ -9,7 +9,7 @@ public class Main {
 
         // VALIDAÇÃO DO NOME
         while (true) {
-            System.out.print("Digite seu nome: ");
+            System.out.print("Digite seu nickname: ");
             nome = scanner.nextLine();
 
             // verifica se contém apenas letras e espaço
