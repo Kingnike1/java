@@ -6,6 +6,7 @@ public class Main {
 
         String nome;
         int idade;
+        double altura;
 
         // VALIDAÇÃO DO NOME
         while (true) {
@@ -32,8 +33,19 @@ public class Main {
                 scanner.next(); // limpa o erro
             }
         }
+        // VALIDAÇÃO DA ALTURA
+        while (true) {
+            System.out.print("Digite sua altura (em metros): ");
 
-        System.out.println("Seu nome é " + nome + " e você tem " + idade + " anos.");
+            if (scanner.hasNextDouble()) {
+                altura = scanner.nextDouble();
+                break;
+            } else {
+                System.out.println("Altura inválida! Digite um número decimal.");
+                scanner.next(); // limpa o erro
+            }
+        }
+        System.out.println("Seu nome é " + nome + " e você tem " + idade + " anos e sua altura é " + altura + " metros.");
 
         scanner.close();
     }
